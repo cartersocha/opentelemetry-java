@@ -1,0 +1,14 @@
+name: Anchore
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # run once a day
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        
+        - uses: anchore/sbom-action@v0
